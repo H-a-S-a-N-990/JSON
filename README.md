@@ -39,7 +39,7 @@ print(pretty);
 //     "admin": true
 // }
 ```
-###fromJSON
+### fromJSON
 ```squirrel
 local jsonStr = "{\"name\":\"Player1\",\"items\":[\"sword\",\"shield\"]}";
 local data = fromJSON(jsonStr);
@@ -55,13 +55,13 @@ local config = {
 };
 toJSONFile("config.json", config, JSON_C_TO_STRING_PRETTY);
 ```
-###fromJSONFile
+### fromJSONFile
 ```squirrel
 local config = fromJSONFile("config.json");
 print(config.serverName); // My Server
 print(config.maxPlayers); // 50
 ```
-###Arrays
+### Arrays
 ```squirrel
 local arr = [1, 2, 3, "hello", true, null];
 local json = toJSON(arr);
@@ -70,7 +70,7 @@ print(json); // [1,2,3,"hello",true,null]
 local parsed = fromJSON("[10, 20, 30]");
 print(parsed[1]); // 20
 ```
-###Nested Objects
+### Nested Objects
 ```squirrel
 local player = {
     name = "Player1",
@@ -92,7 +92,7 @@ print(json);
 //     ]
 // }
 ```
-###Error Handling
+### Error Handling
 ```squirrel
 try {
     local data = fromJSON("invalid json");
